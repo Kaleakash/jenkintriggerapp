@@ -10,6 +10,20 @@ pipeline{
                     sh "ls"
                 }
             }
+
+            stage("Compile the program"){
+                
+                steps {
+                    sh "javac App.java"
+                }
+            }
+
+            stage("Run the program"){
+                
+                steps {
+                    sh "java App"
+                }
+            }
         }
     
 }
